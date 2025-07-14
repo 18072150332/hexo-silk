@@ -1,0 +1,71 @@
+<!-- 导航栏 -->
+<header
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  id="navbar"
+>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <!-- 桌面导航 -->
+      <nav class="hidden md:flex space-x-8">
+        <a
+          href="<%- url_for('/') %>"
+          class="font-medium text-primary hover:text-primary/80 transition-colors"
+          >首页</a
+        >
+        <a
+          href="#categories"
+          class="font-medium text-gray-700 hover:text-primary transition-colors"
+          >分类</a
+        >
+        <a
+          href="#tags"
+          class="font-medium text-gray-700 hover:text-primary transition-colors"
+          >标签</a
+        >
+        <a
+          href="#about"
+          class="font-medium text-gray-700 hover:text-primary transition-colors"
+          >关于</a
+        >
+      </nav>
+
+      <!-- 搜索和菜单按钮 -->
+      <div class="flex items-center space-x-4">
+        <button class="text-gray-700 hover:text-primary transition-colors">
+          <i class="fa fa-search text-lg"></i>
+        </button>
+        <button
+          class="md:hidden text-gray-700 hover:text-primary transition-colors"
+          id="menuBtn"
+        >
+          <i class="fa fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 移动端导航菜单 -->
+  <div
+    class="md:hidden hidden bg-white shadow-lg absolute w-full"
+    id="mobileMenu"
+  >
+    <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+      <a
+        href="<%- url_for('/') %>"
+        class="font-medium text-primary py-2 border-b border-gray-100"
+        >首页</a
+      >
+      <a
+        href="#categories"
+        class="font-medium text-gray-700 py-2 border-b border-gray-100"
+        >分类</a
+      >
+      <a
+        href="#tags"
+        class="font-medium text-gray-700 py-2 border-b border-gray-100"
+        >标签</a
+      >
+      <a href="#about" class="font-medium text-gray-700 py-2">关于</a>
+    </div>
+  </div>
+</header>

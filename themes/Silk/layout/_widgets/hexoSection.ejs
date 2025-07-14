@@ -1,0 +1,47 @@
+<!-- 英雄区域 -->
+<section
+  class="min-h-screen flex items-center bg-gradient-to-br from-primary/5 to-secondary/5"
+>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1
+          class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-balance"
+        >
+          在<span class="text-primary">技术堆</span>里<span
+            class="text-secondary"
+            >找</span
+          >灵感<br />
+        </h1>
+        <p class="mt-6 text-lg text-gray-600 max-w-xl">
+          欢迎来到<%= config.title %>，这是我折腾代码与脑洞的小角落
+        </p>
+        <div class="mt-8">
+          <a
+            href="#articles"
+            class="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+          >
+            查看记录
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="relative">
+          <div
+            class="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-lg animate-float"
+            style="animation-delay: 0s"
+          ></div>
+          <div
+            class="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/10 rounded-lg animate-float"
+            style="animation-delay: 1s"
+          ></div>
+          <img
+            src="https://picsum.photos/600/400?random=1"
+            alt="技术与创意的融合"
+            class="w-full max-w-md rounded-xl shadow-2xl relative z-10"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

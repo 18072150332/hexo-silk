@@ -1,0 +1,16 @@
+<!-- 标签区域 -->
+<section id="tags" class="py-8 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold mb-8">标签</h2>
+    <div class="flex flex-wrap gap-3">
+      <% site.tags.each(function(tag) { %>
+      <a
+        href="<%- tag.permalink %>"
+        class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm hover:bg-primary/20 transition-colors"
+      >
+        <%= tag.name %>
+      </a>
+      <% }); %>
+    </div>
+  </div>
+</section>
