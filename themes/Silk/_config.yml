@@ -29,3 +29,16 @@ markdown:
 
 plugins:
   - hexo-renderer-markdown-it
+
+# Social links configuration
+social:
+  - name: github
+    url: '#'
+    icon: 'fa-github'
+  - name: envelope
+    url: '#'
+    icon: 'fa-envelope'
+  - name: weixin
+    url: '#'
+    icon: 'fa-weixin'
+    qrcode: '/images/wechat-qrcode.png'
