@@ -28,7 +28,7 @@ markdown:
   inline: false  # https://markdown-it.github.io/markdown-it/#MarkdownIt.renderInline
 
 plugins:
-  - hexo-renderer-markdown-it
+  - hexo-renderer-markdown-it 
 
 # Social links configuration
 social:
@@ -42,3 +42,9 @@ social:
     url: '#'
     icon: 'fa-weixin'
     qrcode: '/images/wechat-qrcode.png'
+
+# 作者信息配置
+author:
+  name: 独酌 # 页面展示作者名字
+  avatar: /images/default-avatar.jpg ## 作者头像，放在主题source/images里
+  bio: 小镇码农  ## 作者介绍

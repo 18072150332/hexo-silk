@@ -2,10 +2,11 @@
  * @Author: zhangfu 18072150332@163.com
  * @Date: 2025-07-03 00:20:28
  * @LastEditors: zhangfu 18072150332@163.com
- * @LastEditTime: 2025-07-17 08:28:25
+ * @LastEditTime: 2025-07-17 12:12:56
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
+<!-- head标签 -->
 <%- partial('_partials/head', {
     isPostPage: false,
     hasMarkdown: false
@@ -14,17 +15,17 @@
 
     <%- partial('_partials/header', { isPostPage: false }) %>
     <!-- 英雄区域 -->
-    <%- partial('_widgets/hexoSection') %>
+    <%- partial('_widgets/index/hexoSection') %>
     <!-- 文章区域 -->
-    <%- partial('_widgets/articlesSection') %>
-    <!-- 推荐文章区域 -->
-    <%- partial('_widgets/featuredArticleSection') %>
+    <%- partial('_widgets/index/articlesSection') %>
+    <!-- 推荐文章区域 -->   
+    <%- partial('_widgets/index/featuredArticleSection') %>
     <!-- 分类区域 -->
-    <%- partial('_widgets/categoriesSection') %>
+    <%- partial('_widgets/index/categoriesSection') %>
     <!-- 标签区域 -->
-    <%- partial('_widgets/tagsSection') %>
+    <%- partial('_widgets/index/tagsSection') %>
     <!-- 关于我 -->
-    <%- partial('_widgets/aboutSection') %>
+    <%- partial('_widgets/index/aboutSection') %>
 
     <script>
         // 移动端菜单切换

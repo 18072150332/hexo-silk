@@ -7,16 +7,12 @@ title: 独酌的博客
 subtitle: ''
 description: ''
 keywords:
-author:
-  name: 独酌
-  avatar: /images/default-avatar.jpg
-  bio: 小镇码农
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://zhangfu-blog-evxueyuw.edgeone.site/
+url: https://zhangfu-blog-evxueyuw.edgeone.site/ #这里是腾讯pages部署后生成的链接
 permalink: article/:title/
 permalink_defaults:
 pretty_urls:
