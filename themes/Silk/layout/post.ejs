@@ -1,91 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= page.title %> | <%= config.title %></title>
-    <script src="<%- url_for('/js/tailwindcss3.4.16.js')%>"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2C5F2D',
-                        secondary: '#2C5F2D',
-                        dark: '#1E293B',
-                        light: '#F8FAFC'
-                    },
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="<%- url_for('/css/font-awesome.min.css')%>">
-    <link rel="stylesheet" href="<%- url_for('/css/css2.css?family=Inter:wght@300;400;500;600;700&display=swap')%>">
-    <link rel="stylesheet" href="<%- url_for('/css/tailwind.css')%>">
-    <link rel="stylesheet" href="<%- url_for('/css/github.markdown.css')%>">
-    
-
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-balance {
-                text-wrap: balance;
-            }
-            .animate-float {
-                animation: float 3s ease-in-out infinite;
-            }
-            .transition-all-300 {
-                transition: all 0.3s ease;
-            }
-            .scrollbar-hide::-webkit-scrollbar {
-                display: none;
-            }
-            .card-hover {
-                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-            }
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); } 
-            50% { transform: translateY(-10px); } 
-            100% { transform: translateY(0px); } 
-        }
-    </style>
-</head>
+<%- partial('_partials/head', {
+    isPostPage: true,
+    hasMarkdown: true
+}) %>
 <body class="font-inter bg-gray-50 text-dark">
     <!-- 导航栏 -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <!-- 桌面导航 -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="<%- url_for('/') %>" class="font-medium text-primary hover:text-primary/80 transition-colors">首页</a>
-                </nav>
-                
-                <!-- 搜索和菜单按钮 -->
-                <div class="flex items-center space-x-4">
-                    <button class="text-gray-700 hover:text-primary transition-colors">
-                        <i class="fa fa-search text-lg"></i>
-                    </button>
-                    <button class="md:hidden text-gray-700 hover:text-primary transition-colors" id="menuBtn">
-                        <i class="fa fa-bars text-lg"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 移动端导航菜单 -->
-        <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobileMenu">
-            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-                <a href="<%- url_for('/') %>" class="font-medium text-primary py-2 border-b border-gray-100">首页</a>
-            </div>
-        </div>
-    </header>
+    <%- partial('_partials/header', { isPostPage: true }) %>
 
     <!-- 文章内容区域 -->
     <section class="pt-32 pb-16 bg-white">

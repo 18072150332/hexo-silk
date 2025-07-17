@@ -2,69 +2,17 @@
  * @Author: zhangfu 18072150332@163.com
  * @Date: 2025-07-03 00:20:28
  * @LastEditors: zhangfu 18072150332@163.com
- * @LastEditTime: 2025-07-14 23:37:11
+ * @LastEditTime: 2025-07-17 08:28:25
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= config.title %></title>
-    <script src="<%- url_for('/js/tailwindcss3.4.16.js')%>"></script>
-    <link rel="stylesheet" href="<%- url_for('/css/font-awesome.min.css')%>">
-    <link rel="stylesheet" href="<%- url_for('/css/css2.css?family=Inter:wght@300;400;500;600;700&display=swap')%>">
-    
-    <!-- Tailwind配置 -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2C5F2D',
-                        secondary: '#2C5F2D',
-                        dark: '#1E293B',
-                        light: '#F8FAFC'
-                    },
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-balance {
-                text-wrap: balance;
-            }
-            .animate-float {
-                animation: float 3s ease-in-out infinite;
-            }
-            .transition-all-300 {
-                transition: all 0.3s ease;
-            }
-            .scrollbar-hide::-webkit-scrollbar {
-                display: none;
-            }
-            .card-hover {
-                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-            }
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); } 
-            50% { transform: translateY(-10px); } 
-            100% { transform: translateY(0px); } 
-        }
-    </style>
-</head>
+<%- partial('_partials/head', {
+    isPostPage: false,
+    hasMarkdown: false
+}) %>
 <body class="font-inter bg-gray-50 text-dark">
 
-    <%- partial('_partials/header') %>
+    <%- partial('_partials/header', { isPostPage: false }) %>
     <!-- 英雄区域 -->
     <%- partial('_widgets/hexoSection') %>
     <!-- 文章区域 -->
