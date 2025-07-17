@@ -20,12 +20,14 @@
             src="<%= post.cover %>"
             alt="<%= post.title %>"
             class="w-full h-full object-cover"
+            loading="lazy"
           />
           <% } else { %>
           <img
             src="https://picsum.photos/600/400?random=2"
             alt="<%= post.title %>"
             class="w-full h-full object-cover"
+            loading="lazy"
           />
           <% } %>
         </div>

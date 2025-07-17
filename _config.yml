@@ -10,6 +10,12 @@ keywords:
 language: en
 timezone: ''
 
+# 作者信息配置
+author:
+  name: 独酌 # 页面展示作者名字
+  avatar: /images/default-avatar.jpg ## 作者头像，放在主题source/images里
+  bio: 小镇码农  ## 作者介绍
+
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://zhangfu-blog-evxueyuw.edgeone.site/ #这里是腾讯pages部署后生成的链接

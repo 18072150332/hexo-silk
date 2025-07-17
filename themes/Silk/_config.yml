@@ -33,18 +33,12 @@ plugins:
 # Social links configuration
 social:
   - name: github
-    url: '#'
+    url: 'https://github.com/18072150332/hexo-silk'
     icon: 'fa-github'
   - name: envelope
-    url: '#'
+    url: 'mailto:18072150332@fudan.edu.cn'
     icon: 'fa-envelope'
   - name: weixin
     url: '#'
     icon: 'fa-weixin'
     qrcode: '/images/wechat-qrcode.png'
-
-# 作者信息配置
-author:
-  name: 独酌 # 页面展示作者名字
-  avatar: /images/default-avatar.jpg ## 作者头像，放在主题source/images里
-  bio: 小镇码农  ## 作者介绍

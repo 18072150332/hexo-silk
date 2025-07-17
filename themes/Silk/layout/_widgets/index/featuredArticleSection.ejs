@@ -34,6 +34,7 @@
             <img
               src="<%- url_for('/images/default-avatar.jpg') %>"
               class="w-10 h-10 rounded-full"
+              loading="lazy"
             />
             <div class="ml-3">
               <div class="font-medium"><%= config.author.name %></div>
@@ -45,6 +46,7 @@
             src="<%- post.cover ? post.cover : `https://picsum.photos/600/400?random=${post.id}` %>"
             alt="<%= post.title %>"
             class="rounded-xl shadow-lg w-full"
+            loading="lazy"
           />
         </div>
       </div>
