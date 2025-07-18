@@ -1,0 +1,47 @@
+
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold mb-12 text-center">相关文章</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <% if (page.related_posts && page.related_posts.length) { %> <%
+      page.related_posts.limit(3).each(function(relatedPost) { %>
+      <article class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+        <div class="relative h-48 overflow-hidden">
+          <% if (relatedPost.cover) { %>
+          <img
+            src="<%= relatedPost.cover %>"
+            alt="<%= relatedPost.title %>"
+            class="w-full h-full object-cover"
+          />
+          <% } else { %>
+          <img
+            src="https://picsum.photos/600/400?random=<%= relatedPost.id %>"
+            alt="<%= relatedPost.title %>"
+            class="w-full h-full object-cover"
+          />
+          <% } %>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">
+            <a
+              href="<%- relatedPost.permalink %>"
+              class="hover:text-primary transition-colors"
+              ><%= relatedPost.title %></a
+            >
+          </h3>
+          <p class="text-gray-600 mb-4">
+            <% let text = relatedPost.content.replace(/<[^>]+>/g, '').trim(); %>
+            <% let isChinese = /[一-龥]/.test(text); %> <% let length =
+            isChinese ? 50 : 100; %> <%= relatedPost.excerpt ||
+            text.substring(0, length) + (text.length > length ? '...' : '') %>
+          </p>
+          <div class="flex items-center text-sm text-gray-500">
+            <i class="fa fa-calendar mr-1"></i> <%= date(relatedPost.date,
+            'YYYY-MM-DD') %>
+          </div>
+        </div>
+      </article>
+      <% }); %> <% } %>
+    </div>
+  </div>
+</section>
