@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<%- url_for('/css/css2.css?family=Inter:wght@300;400;500;600;700&display=swap')%>">
     <!-- post页面需要markdown样式 -->
     <% if (hasMarkdown) { %>
+    <script src="<%- url_for('/js/Valine.min.js')%>"></script>
     <link rel="stylesheet" href="<%- url_for('/css/github.markdown.css')%>">
     <% } %>
     
