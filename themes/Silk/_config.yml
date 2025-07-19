@@ -42,3 +42,14 @@ social:
     url: '#'
     icon: 'fa-weixin'
     qrcode: '/images/wechat-qrcode.png'
+
+# 菜单
+menus:
+  - name: 首页
+    url: '/'
+  - name: 分类
+    url: '#categories'
+  - name: 标签
+    url: '#tags'
+  - name: 关于
+    url: '#about'

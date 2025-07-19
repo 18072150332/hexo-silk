@@ -1,8 +1,10 @@
+<!--
+ * @Author: zhangfu 18072150332@163.com
+ * @Date: 2025-07-14 23:11:11
+ * @LastEditors: zhangfu 18072150332@163.com
+ * @LastEditTime: 2025-07-19 20:50:59
+-->
 <!-- 导航栏 -->
-<%
-  var menus = [{name: '首页', href: url_for('/')}, { name: '分类', href: '#categories'}, { name: '标签', href: '#tags'}, { name: '关于', href: '#about'}]
-
-%>
 <header
   class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
   id="navbar"
@@ -11,13 +13,13 @@
     <div class="flex justify-between items-center py-4">
       <!-- 桌面导航 -->
       <nav class="hidden md:flex space-x-8">
-        <% menus.forEach(menu => { 
+        <% theme.menus.forEach(menu => { 
           if (isPostPage && menu.name !== '首页') {
             return
           }
         %>
           <a
-            href="<%- menu.href %>"
+            href="<%- menu.url %>"
             class="font-medium text-primary hover:text-primary/80 transition-colors"
             ><%- menu.name %></a
           >
@@ -45,10 +47,10 @@
     id="mobileMenu"
   >
     <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-      <% menus.forEach((menu, index) => { %>
+      <% theme.menus.forEach((menu, index) => { %>
         <a
-          href="<%- menu.href %>"
-          class="font-medium text-primary py-2 <%- index === menus.length-1 ? '': 'border-b border-gray-100' %>"
+          href="<%- menu.url %>"
+          class="font-medium text-primary py-2 <%- index === theme.menus.length-1 ? '': 'border-b border-gray-100' %>"
           ><%- menu.name %></a
         >
       <% }) %>
