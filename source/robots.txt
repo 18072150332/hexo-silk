@@ -1,0 +1,5 @@
+# robots.txt for Hexo blog
+User-agent: *
+Allow: /
+
+Sitemap: https://yourdomain.com/sitemap.xml

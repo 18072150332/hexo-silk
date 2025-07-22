@@ -4,11 +4,11 @@
 
 # Site
 title: 独酌的博客
-subtitle: ''
-description: ''
-keywords:
-language: en
-timezone: ''
+subtitle: 前端工程师博客
+description: 专注前端, 分享编程知识和10前端之路走过来遇到的各种坑, 助开发者提升技术栈，少走弯路
+keywords: hexo,react,vue,性能优化,前端
+language: zh-CN
+timezone: Asia/Shanghai
 
 # 作者信息配置
 author:

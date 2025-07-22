@@ -1,3 +1,9 @@
+<!--
+ * @Author: zhangfu 18072150332@163.com
+ * @Date: 2025-07-03 22:34:32
+ * @LastEditors: zhangfu 18072150332@163.com
+ * @LastEditTime: 2025-07-22 19:42:09
+-->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <%- partial('_partials/head', {
@@ -18,5 +24,27 @@
     <%- partial('_widgets/post/relatedArticles') %>
     <!-- 控制菜单的脚本 -->
     <%- partial('_partials/footerJs') %>
+
+    <!-- 文章结构化数据 -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "<%= page.title %>",
+    "description": "<%= page.description || config.description %>",
+    "image": "<%= page.cover || config.cover %>",
+    "author": {
+        "@type": "Person",
+        "name": "<%= config.author %>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "<%= config.title %>",
+        "logo": { "@type": "ImageObject", "url": "<%= config.logo %>" }
+    },
+    "datePublished": "<%= page.date %>",
+    "dateModified": "<%= page.updated %>"
+    }
+    </script>
 </body>
 </html>
