@@ -9,3 +9,4 @@ _multiconfig.yml
 .github/
 .deploy_git
 valine_config.yml
+source/*
