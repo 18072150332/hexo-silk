@@ -66,14 +66,26 @@
       <div class="mt-8 mb-8">
         <span class="text-gray-500 mr-3"><i class="fa fa-tags"></i> 标签:</span>
         <div class="inline-flex flex-wrap gap-2">
-          <% page.tags.each(function(tag) { %>
-          <a
-            href="<%- tag.permalink %>"
-            class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm hover:bg-primary/20 transition-colors"
-          >
-            <%= tag.name %>
-          </a>
-          <% }); %>
+          <% page.tags.each(function(tag) { 
+            // 处理标签数组的情况，将包含多个关键字的标签分离显示
+            if (Array.isArray(tag.name)) { 
+              tag.name.forEach(function(singleTag) { %>
+                <a
+                  href="<%- url_for(config.tag_dir) + '/' + encodeURIComponent(singleTag) + '/' %>"
+                  class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm hover:bg-primary/20 transition-colors"
+                >
+                  <%= singleTag %>
+                </a>
+              <% }); 
+            } else { %>
+              <a
+                href="<%- tag.permalink %>"
+                class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm hover:bg-primary/20 transition-colors"
+              >
+                <%= tag.name %>
+              </a>
+            <% } 
+          }); %>
         </div>
       </div>
       <% } %>
