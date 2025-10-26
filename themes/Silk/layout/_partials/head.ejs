@@ -1,3 +1,9 @@
+<!--
+ * @Author: zhangfu 18072150332@163.com
+ * @Date: 2025-07-17 08:14:30
+ * @LastEditors: zhangfu 18072150332@163.com
+ * @LastEditTime: 2025-10-26 09:05:32
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +21,18 @@
     <meta name="twitter:title" content="<%= page.title %>">
     <meta name="twitter:description" content="<%= page.description || config.description %>">
     <meta name="twitter:image" content="<%= page.cover || config.cover %>">
+    <!-- 页面标题 -->
     <title><%= isPostPage ? (page.title || config.title): config.title %></title>
+    <link rel="stylesheet" href="<%- url_for('/css/main.css')%>">
     <script src="<%- url_for('/js/tailwindcss3.4.16.js')%>"></script>
     <link rel="stylesheet" href="<%- url_for('/css/font-awesome.min.css')%>">
     <link rel="stylesheet" href="<%- url_for('/css/css2.css?family=Inter:wght@300;400;500;600;700&display=swap')%>">
     <!-- post页面需要markdown样式 -->
     <% if (hasMarkdown) { %>
     <script src="<%- url_for('/js/Valine.min.js')%>"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <link rel="stylesheet" href="<%- url_for('/css/github.markdown.css')%>">
     <% } %>
     

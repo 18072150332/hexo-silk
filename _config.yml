@@ -17,8 +17,6 @@ author:
   bio: 小镇码农  ## 作者介绍
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://zhangfu-blog-evxueyuw.edgeone.site/ #这里是腾讯pages部署后生成的链接
 permalink: article/:title/
 permalink_defaults:
 pretty_urls:
@@ -45,20 +43,9 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
-syntax_highlighter: highlight.js
-highlight:
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
-prismjs:
-  preprocess: true
-  line_number: true
-  tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
