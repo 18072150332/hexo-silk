@@ -2,7 +2,7 @@
  * @Author: zhangfu 18072150332@163.com
  * @Date: 2025-07-17 08:14:30
  * @LastEditors: zhangfu 18072150332@163.com
- * @LastEditTime: 2025-10-26 19:38:36
+ * @LastEditTime: 2025-10-28 21:25:44
 -->
 <head>
     <meta charset="UTF-8">
@@ -29,21 +29,9 @@
     <!-- post页面需要markdown样式 -->
     <% if (hasMarkdown) { %>
     <script src="<%- url_for('/js/Valine.min.js')%>"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', (event) => {
-        // 配置highlight.js
-        hljs.configure({
-          tabReplace: '  ', // 用2个空格替换制表符
-          languages: [] // 让highlight.js自动检测语言
-        });
-        // 只对未处理的代码块进行高亮
-        document.querySelectorAll('pre code:not(.hljs)').forEach((block) => {
-          hljs.highlightElement(block);
-        });
-      });
-    </script>
+    <!-- 替换原来的 highlight.js 样式文件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
     <link rel="stylesheet" href="<%- url_for('/css/github.markdown.css')%>">
     <% } %>
     
