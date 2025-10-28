@@ -81,3 +81,15 @@ plugins:
 
 ## Themes: https://hexo.io/themes/
 theme: Silk
+
+#代码高亮
+syntax_highlighter: highlight.js
+highlight:
+  auto_detect: false
+  line_number: true
+  wrap: true
+  hljs: true  
+  line_threshold: 0
+  tab_replace: "  "
+  exclude_languages:
+    - example

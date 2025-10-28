@@ -31,7 +31,19 @@
     <script src="<%- url_for('/js/Valine.min.js')%>"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        // 配置highlight.js
+        hljs.configure({
+          tabReplace: '  ', // 用2个空格替换制表符
+          languages: [] // 让highlight.js自动检测语言
+        });
+        // 只对未处理的代码块进行高亮
+        document.querySelectorAll('pre code:not(.hljs)').forEach((block) => {
+          hljs.highlightElement(block);
+        });
+      });
+    </script>
     <link rel="stylesheet" href="<%- url_for('/css/github.markdown.css')%>">
     <% } %>
     

@@ -812,6 +812,10 @@
   text-align: right;
 }
 
+.markdown-body .code {
+  width: 100%;
+}
+
 .markdown-body code,
 .markdown-body tt {
   padding: .2em .4em;
@@ -822,7 +826,6 @@
   border-radius: 6px;
 }
 
-.markdown-body code br,
 .markdown-body tt br {
   display: none;
 }
