@@ -12,7 +12,7 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <% page.posts.each(function(post) { %>
+      <% page.posts.each(function(post, index) { %>
       <article class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
         <div class="relative h-48 overflow-hidden">
           <% if (post.cover) { %>
@@ -24,7 +24,7 @@
           />
           <% } else { %>
           <img
-            src="https://picsum.photos/600/400?random=2"
+            src="https://picsum.photos/600/400?random=<%= index %>"
             alt="<%= post.title %>"
             class="w-full h-full object-cover"
             loading="lazy"
