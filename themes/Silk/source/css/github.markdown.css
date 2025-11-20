@@ -857,7 +857,7 @@
 }
 
 .markdown-body .highlight {
-  margin-bottom: var(--base-size-16);
+  margin: 0 0 var(--base-size-16) 0;
 }
 
 .markdown-body .highlight pre {
@@ -882,6 +882,7 @@
 .markdown-body .code pre {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
+  padding-left: 0;
 }
 
 .markdown-body pre code,
